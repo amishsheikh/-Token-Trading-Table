@@ -3,6 +3,7 @@
 import { useTokenUpdates } from '@/hooks/useTokenUpdates';
 import { useSelector } from 'react-redux';
 import { selectAllTokens } from '@/store/selectors';
+import { Heart } from 'lucide-react';
 import { PulseGrid } from '@/components/organisms/PulseGrid';
 
 export default function Home() {
