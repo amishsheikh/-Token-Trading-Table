@@ -3,6 +3,7 @@
 import { useTokenUpdates } from '@/hooks/useTokenUpdates';
 import { useSelector } from 'react-redux';
 import { selectAllTokens } from '@/store/selectors';
+import { Heart } from 'lucide-react';
 import { PulseGrid } from '@/components/organisms/PulseGrid';
 import { Heart } from 'lucide-react';
 
@@ -26,6 +27,7 @@ export default function Home() {
         </header>
 
         <PulseGrid tokens={data} />
+        
       </div>
 
       {/* FOOTER */}
@@ -42,5 +44,14 @@ export default function Home() {
         </div>
       </footer>
     </main>
+
+    <footer className="py-8 border-t border-slate-900 bg-slate-950">
+        <div className="flex items-center justify-center gap-2 text-slate-500 text-sm">
+          <span>Made with</span>
+          <Heart size={16} className="text-pink-500 fill-pink-500/20 animate-pulse" />
+          <span>by <span className="text-indigo-400 font-medium">Amish</span></span>
+        </div>
+      </footer>
+    
   );
 }
